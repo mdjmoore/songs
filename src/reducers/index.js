@@ -18,15 +18,15 @@ export const songsReducer = () => {
 			title: 'Outlaw Baby',
 			duration: '3:50',
 		},
-	]
-}
+	];
+};
 
 export const selectedSongReducer = (selectedSong = null, action) => {
 	if (action.type === 'SONG_SELECTED') {
 		return action.payload
 	}
 	return selectedSong;
-}
+};
 
 export default combineReducers({
 	songs: songsReducer,
